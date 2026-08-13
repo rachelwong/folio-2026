@@ -12,7 +12,6 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false) // set off by default
 
   return (
-
     <header className={styles.header}>
       <div className={ styles['header-wrapper']}>
       <nav className={styles.nav}>
@@ -28,21 +27,21 @@ const Navbar = () => {
         <div className="nav-list-container">
           <ul className={styles['nav-list']}>
               <li className={styles['nav-list-item']}>
-                <Link href="/"><a>
-                  Home</a>
+                <Link href="/">
+                  Home
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
                 <Link href="/blog">
-                  <a>
-                  Blog</a>
+                  
+                  Blog
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
                 <Link href="/illustration">
-                  <a>
+                  
                   Illustration
-                  </a>
+                  
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
@@ -60,7 +59,7 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
 export default Navbar

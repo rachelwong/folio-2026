@@ -36,27 +36,39 @@ const Footer = () => {
             <nav className={styles['footer-social-nav']}>
             <ul className={styles['footer-social-nav__list']}>
               <li>
-                <Link href="http://www.github.com/rachelwong" target="_blank" rel="noopener noreferrer">
-                  <a className={ styles['footer-social-nav__list__link']}>
-                    <Image src={GithubIcon} width={20} height={ 20} alt="Github link" />
-                    <span className="sr-only">Github account</span>
-                  </a>
+                <Link
+                  href="http://www.github.com/rachelwong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={ styles['footer-social-nav__list__link']}>
+
+                  <Image src={GithubIcon} width={20} height={ 20} alt="Github link" />
+                  <span className="sr-only">Github account</span>
+
                 </Link>
               </li>
               <li>
-                <Link href="http://www.instagram.com/itsonlyher" target="_blank" rel="noopener noreferrer">
-                  <a className={ styles['footer-social-nav__list__link']}>
-                    <Image src={InstagramIcon} width={20} height={ 20} alt="Instagram link" />
-                    <span className="sr-only">Instagram</span>
-                  </a>
+                <Link
+                  href="http://www.instagram.com/itsonlyher"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={ styles['footer-social-nav__list__link']}>
+
+                  <Image src={InstagramIcon} width={20} height={ 20} alt="Instagram link" />
+                  <span className="sr-only">Instagram</span>
+
                 </Link>
               </li>
               <li>
-                <Link href="http://www.linkedin.com/in/rachwong" target="_blank" rel="noopener noreferrer">
-                  <a className={ styles['footer-social-nav__list__link']}>
-                    <Image src={LinkedinIcon} width={20} height={ 20} alt="Linkedin link"/>
-                    <span className="sr-only">Linkedin</span>
-                  </a>
+                <Link
+                  href="http://www.linkedin.com/in/rachwong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={ styles['footer-social-nav__list__link']}>
+
+                  <Image src={LinkedinIcon} width={20} height={ 20} alt="Linkedin link"/>
+                  <span className="sr-only">Linkedin</span>
+
                 </Link>
               </li>
             </ul>
@@ -65,8 +77,8 @@ const Footer = () => {
           </div>
         </div>
         </footer>
-      </div>
-  )
+    </div>
+  );
 }
 
 export default Footer

@@ -9,23 +9,23 @@ const PostEntry = ({ post }) => {
   const month = new Date(Number(parsedDate[0]), Number(parsedDate[1]), Number(parsedDate[2])).toLocaleString('default', { month: 'long' })
 
   return (
-      <div className={styles['post-entry-wrapper']}
-        initial={{ y: 10 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5}}
-      >
+    <div className={styles['post-entry-wrapper']}
+      initial={{ y: 10 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5}}
+    >
       <time className={styles['post-entry-date']} dateTime={publishedDate}>{parsedDate[2] + " " + month + " " + parsedDate[0]}</time>
       <Link href={'/blog/' + slug} rel=" noopener noreferrer" className={styles['post-entry-title__link']}>
-          <a href={'/blog/' + slug}>
-            <h3 className={styles['post-entry-title']}>{title}</h3>
-          </a>
-        </Link>
-        <ul className={ styles['post-entry-tags']}>{tags.length > 0 && tags.map((tag, tagIndex) => (
-          <li key={ tagIndex }><span>{ tag }</span></li>
-        ))}</ul>
-        <p className={ styles['post-blurb']}>{ blurb }</p>
-      </div>
-  )
+
+        <h3 className={styles['post-entry-title']}>{title}</h3>
+
+      </Link>
+      <ul className={ styles['post-entry-tags']}>{tags.length > 0 && tags.map((tag, tagIndex) => (
+        <li key={ tagIndex }><span>{ tag }</span></li>
+      ))}</ul>
+      <p className={ styles['post-blurb']}>{ blurb }</p>
+    </div>
+  );
 }
 
 export default PostEntry

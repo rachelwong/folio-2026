@@ -203,10 +203,12 @@ export default function Home({ shots }) {
                   </div>
                   <div className={styles['home-header__text__mask--btn']}>
                     <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 1.5}} className={styles['home-header__text__line--blurb']}>
-                      <Link href="/RachelWong_CV.pdf" target="_blank">
-                        <a href="/RachelWong_CV.pdf" target="_blank" className={styles['home-header__text__btn']} >
+                      <Link
+                        href="/RachelWong_CV.pdf"
+                        target="_blank"
+                        className={styles['home-header__text__btn']}>
                           Download CV
-                        </a></Link>
+                        </Link>
                     </motion.div>
                   </div>
                 </motion.div>
@@ -220,109 +222,117 @@ export default function Home({ shots }) {
         <Carousel />
       </div>
 
-        <Container className={styles.projects}>
-        <Row className={styles['projects-description']}>
-          <h3 id="#projects">Projects</h3>
-        </Row>
+      <Container className={styles.projects}>
+      <Row className={styles['projects-description']}>
+        <h3 id="#projects">Projects</h3>
+      </Row>
 
 <Row className={`${styles['project-row']} ${styles['project-row--even']}`}>
-          <Col lg={6}>
-            <div className={styles['project-textwrapper__inner']}>
-              <h3 className={styles['project__title'] }>LinkedOut</h3>
-              <ul className={styles['project-tags']}>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
-                  </span>
-                  <span>MongoDB</span></li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-                  </span>
-                  <span>Express</span></li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"}  aria-hidden={ true }/>
-                  </span>
-                  <span>React</span>
-                </li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-                  </span>
-                  <span>Node</span>
-                </li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-                  </span>
-                  <span>Bulma</span>
-                </li>
-              </ul>
-
-              <p className={ styles['project__summary'] }>LinkedOut is a full-stack MERN app where coding bootcamp graduates can list their profiles publicly for prospective employers and business clients to view and connect with for work opportunities. Completed as a group project.</p>
-            <div className={styles['project-actions']}>
-                {/* <Link href="/">
-                  <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client" className={styles['project-actions__repolink']} rel="noopener noreferrer"> <span>See Source Code</span></a></Link> */}
-                <Link href="/">
-                  <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client/" className={styles['project-actions__livelink']} rel="noopener noreferrer">See repo</a></Link>
-              </div>
-              </div>
-          </Col>
-
-          <Col lg={ 6} className={styles['project-imagewrapper']}>
-            <MiniCarousel slide1={Project2Image1} slide2={Project2Image2} slide3={Project2Image3} />
-          </Col>
-
-        </Row>
-
-        <Row className={`${styles['project-row']} ${styles['project-row--odd']}`}>
-          <Col lg={ 6} className={styles['project-imagewrapper']}>
-            <MiniCarousel slide1={Project1Image1} slide2={Project1Image2} slide3={Project1Image3} />
-          </Col>
-          <Col lg={6}>
-            <div className={styles['project-textwrapper__inner']}>
-              <h3 className={styles['project__title'] }>Preloved</h3>
-              <ul className={styles['project-tags']}>
-                <li>
+        <Col lg={6}>
+          <div className={styles['project-textwrapper__inner']}>
+            <h3 className={styles['project__title'] }>LinkedOut</h3>
+            <ul className={styles['project-tags']}>
+              <li>
                 <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
                 </span>
-                <span>Ruby</span></li>
-                <li>              <span className={styles['project-tags__plus']}>
+                <span>MongoDB</span></li>
+              <li>
+                <span className={styles['project-tags__plus']}>
                   <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                 </span>
-                <span>Rails</span></li>
-                <li>              <span className={styles['project-tags__plus']}>
+                <span>Express</span></li>
+              <li>
+                <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"}  aria-hidden={ true }/>
+                </span>
+                <span>React</span>
+              </li>
+              <li>
+                <span className={styles['project-tags__plus']}>
                   <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                 </span>
-                <span>Gems</span></li>
-                <li>              <span className={styles['project-tags__plus']}>
+                <span>Node</span>
+              </li>
+              <li>
+                <span className={styles['project-tags__plus']}>
                   <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                 </span>
-                  <span>Bootstrap</span>
-                </li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-                </span>
-                  <span>HTML5/CSS3</span>
-                </li>
-              </ul>
+                <span>Bulma</span>
+              </li>
+            </ul>
 
-              <p className={ styles['project__summary']}>A full-stack ruby-on-rails application that allows private owners of second hand musical instruments to list at compassionate prices for Queensland schools to purchase for their students.</p>
-            <div className={styles['project-actions']}>
-                {/* <Link href="/">
-                  <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link> */}
-                <Link href="/">
-                  <a target="_blank" href="https://github.com/rachelwong/music/" rel="noopener noreferrer" className={styles['project-actions__livelink']}>See repo</a></Link>
-              </div>
-              </div>
-          </Col>
-        </Row>
+            <p className={ styles['project__summary'] }>LinkedOut is a full-stack MERN app where coding bootcamp graduates can list their profiles publicly for prospective employers and business clients to view and connect with for work opportunities. Completed as a group project.</p>
+          <div className={styles['project-actions']}>
+              {/* <Link href="/">
+                <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client" className={styles['project-actions__repolink']} rel="noopener noreferrer"> <span>See Source Code</span></a></Link> */}
+              <Link
+                href="/"
+                target="_blank"
+                className={styles['project-actions__livelink']}
+                rel="noopener noreferrer">
+                See repo</Link>
+            </div>
+            </div>
+        </Col>
+
+        <Col lg={ 6} className={styles['project-imagewrapper']}>
+          <MiniCarousel slide1={Project2Image1} slide2={Project2Image2} slide3={Project2Image3} />
+        </Col>
+
+      </Row>
+
+      <Row className={`${styles['project-row']} ${styles['project-row--odd']}`}>
+        <Col lg={ 6} className={styles['project-imagewrapper']}>
+          <MiniCarousel slide1={Project1Image1} slide2={Project1Image2} slide3={Project1Image3} />
+        </Col>
+        <Col lg={6}>
+          <div className={styles['project-textwrapper__inner']}>
+            <h3 className={styles['project__title'] }>Preloved</h3>
+            <ul className={styles['project-tags']}>
+              <li>
+              <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
+              </span>
+              <span>Ruby</span></li>
+              <li>              <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
+              </span>
+              <span>Rails</span></li>
+              <li>              <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
+              </span>
+              <span>Gems</span></li>
+              <li>              <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
+              </span>
+                <span>Bootstrap</span>
+              </li>
+              <li>
+                <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
+              </span>
+                <span>HTML5/CSS3</span>
+              </li>
+            </ul>
+
+            <p className={ styles['project__summary']}>A full-stack ruby-on-rails application that allows private owners of second hand musical instruments to list at compassionate prices for Queensland schools to purchase for their students.</p>
+          <div className={styles['project-actions']}>
+              {/* <Link href="/">
+                <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link> */}
+              <Link
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles['project-actions__livelink']}>
+                See repo</Link>
+            </div>
+            </div>
+        </Col>
+      </Row>
 
 
-      </Container>
+    </Container>
 
       <div className={styles['shots-container']}>
         <div className={styles['shots-summary']}>
@@ -376,5 +386,5 @@ export default function Home({ shots }) {
       </div>
 
     </div>
-  )
+  );
 }
