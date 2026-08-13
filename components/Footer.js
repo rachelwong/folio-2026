@@ -31,7 +31,7 @@ const Footer = () => {
                   <Link href="http://www.github.com/rachelwong" target="_blank" rel="noopener noreferrer">Github</Link>
                 </li>
                 <li>
-                  <Link href="http://www.linkedin.com/in/rachwong" target="_blank" rel="noopener noreferrer">Contact</Link>
+                  <Link href="mailto:hello.rachelwong@gmail.com" target="_blank" rel="noopener noreferrer" title="Email to hello.rachelwong@gmail.com">Contact</Link>
                 </li>
               </ul>
             </nav>

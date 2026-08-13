@@ -136,7 +136,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="http://www.linkedin.com/in/rachwong" target="_blank" rel="noopener noreferrer">Contact</a>
+          <a href="mailto:hello.rachelwong@gmail.com" target="_blank" rel="noopener noreferrer" title="Email to hello.rachelwong@gmail.com">Contact</a>
         </motion.li>
       </ul>
     </div>

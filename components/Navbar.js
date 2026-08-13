@@ -50,7 +50,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className={styles['nav-list-item']}>
-                <a target="_blank" href="http://www.linkedin.com/in/rachwong" rel="noopener noreferrer">
+                <a target="_blank" href="mailto:hello.rachelwong@gmail.com" rel="noopener noreferrer" title="Email to hello.rachelwong@gmail.com">
                   Contact
                 </a>
               </li>
