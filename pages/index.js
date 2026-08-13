@@ -220,9 +220,9 @@ export default function Home({ shots }) {
       </div>
 
       <Container className={styles.projects}>
-      <Row className={styles['projects-description']}>
+      <div className={styles['projects-description']}>
         <h3 id="#projects">Projects</h3>
-      </Row>
+      </div>
 
 <Row className={`${styles['project-row']} ${styles['project-row--even']}`}>
         <Col lg={6}>
