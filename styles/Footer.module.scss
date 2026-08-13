@@ -1,0 +1,135 @@
+@use './mixins.scss' as *;
+
+.footer-container {
+  width: 100%;
+  display:block;
+  position:relative;
+
+  svg {
+    fill: red;
+    transform: scaleY(-1);
+  }
+}
+.footerWave {
+  width: 100%;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+}
+.footer {
+  // background: #05042c;
+  background: #c8c8d3;
+  color: black;
+  display:flex;
+  font-family: var(--Roboto);
+}
+
+.footer-wrapper {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0rem 0 3rem;
+}
+.footer-image-wrapper {}
+
+.footer-nav-wrapper {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 90%;
+  padding-left: 3rem;
+  height: 100%;
+}
+
+.footer-nav {
+  font-size: 1.7rem;
+  line-height: 1.9;
+}
+
+.footer-nav-list {
+  list-style: none;
+
+  @include respond(mobile) {
+  display:flex;
+  }
+
+  & li {
+    margin-left: 2.5rem;
+    text-transform: uppercase;
+    font-family: var(--SpaceGrotesk);
+  }
+
+  & li a {
+    position:relative;
+    background-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, lightcoral, lightcoral);
+    background-size: 100% .2rem, 0 .2rem;
+    background-position: 100% 95%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .2s ease-out;
+    color: black;
+  }
+
+  & li a:hover,
+  & li a:focus{
+    color:black;
+      background-size: 0 .2rem, 0 .8rem;
+  }
+}
+
+.footer-social-nav {
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-top: 3rem;
+  &::before {
+    position:absolute;
+    display:block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    color: #000;
+    z-index: 1;
+  }
+}
+
+.footer-social-nav__list {
+  display:flex;
+  list-style:none;
+  margin: 0;
+}
+.footer-social-nav__list__link {
+  cursor:pointer;
+  margin-left: 1.5rem;
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+  display:block;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-.5rem);
+  }
+}
+
+.footer-copyright {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  font-family: var(--SpaceGrotesk);
+  text-transform: capitalize;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease-out;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid black;
+  }
+}
+
+
+.footer-copyright {}

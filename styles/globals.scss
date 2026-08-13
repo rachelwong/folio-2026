@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Grotesk:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+:root {
+  --SpaceGrotesk: 'Space Grotesk', sans-serif;
+  --Roboto: 'Roboto', sans-serif;
+  --FiraCode: 'Fira Code', monospace;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  font-display: swap;
+}
+
+html { font-size: 62.5%; }
+
+body {
+  font-family: var(--Roboto);
+  font-display: swap;
+}
+a {
+  text-decoration: none !important;
+}
+
+#__next {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position:relative;
+}
+
+// screen-reader only
+.sr-only{
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow:hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  white-space: nowrap;
+}
