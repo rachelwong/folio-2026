@@ -16,7 +16,7 @@ const Shot = ({ shot }) => {
           <h4 className={styles['shot-title']}>
             {projectName}
             <span className={styles['shot-title__arrow']}>
-              <Image src={Arrow} width={18} height={18} className={ styles['shot-title__arrow-image']} alt="" aria-hidden={ true } />
+              <Image src={Arrow} width={18} height={18} className={ styles['shot-title__arrow-image']} alt="" aria-hidden={ true } loading="lazy" />
             </span>
           </h4>
               <ul className={ styles['shot-tags']}>
