@@ -127,9 +127,7 @@
 
   &:hover,
   &:focus {
+    cursor: auto;
     border-bottom: 1px solid black;
   }
 }
-
-
-.footer-copyright {}

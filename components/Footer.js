@@ -3,7 +3,6 @@ import styles from '../styles/Footer.module.scss';
 import Link from 'next/link';
 import GithubIcon from '../public/github-brands.svg'
 import LinkedinIcon from '../public/linkedin-brands.svg'
-import InstagramIcon from '../public/instagram-brands.svg'
 
 const Footer = () => {
 
@@ -47,18 +46,6 @@ const Footer = () => {
 
                   <Image src={GithubIcon} width={20} height={ 20} alt="Github link" />
                   <span className="sr-only">Github account</span>
-
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="http://www.instagram.com/itsonlyher"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={ styles['footer-social-nav__list__link']}>
-
-                  <Image src={InstagramIcon} width={20} height={ 20} alt="Instagram link" />
-                  <span className="sr-only">Instagram</span>
 
                 </Link>
               </li>
