@@ -54,7 +54,7 @@ export const getStaticProps = async () => {
 export default function Home({ shots }) {
 
   const titleLine1 = "Hello I'm Rachel."
-  const titleLine2 = "I am a front-end developer from Brisbane."
+  const titleLine2 = "I am a software developer from Brisbane."
   const titleLine3 = "I enjoy building interfaces & learning new tech."
 
   // variants for framer motion
@@ -85,8 +85,8 @@ export default function Home({ shots }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Rachel Wong Front end developer</title>
-        <meta name="description" content="Front end developer portfolio" />
+        <title>Rachel Wong software developer</title>
+        <meta name="description" content="software developer portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -344,9 +344,9 @@ export default function Home({ shots }) {
       <div className={styles['about-container']}>
         <div className={styles['about-summary']}>
           <h3>About me</h3>
-          <p>I am a front-end developer based in Brisbane. I have five years of public service experience serving two Queensland State government departments at various capacities before changing careers in 2018. I have extensive experience in public administration, data analytics, Sharepoint development. In a previous life, I also did freelance illustration using the Adobe Creative Suite. </p>
-          <p>I derive much personal satisfaction from being able to translate a static design into a live, fully functioning product. </p>
-         <p>I am a visual and interpersonal learner. I absorb, digest and retain knowledge from my peers and from rolling my sleeves up to work.</p>
+          <p>I am a software developer based in Brisbane. I have five years of hands-on experience building business-critical user journeys for web, iOS and Android platforms. Prior to getting on the tools, I've worked for a number of years in administration for the public service and university student administration. In a previous life, I also did freelance illustration for local indy filmmakers and storytellers. </p>
+          <p>I enjoy the process of translating a static, flat design into a living, functioning product in the hands of the customer-user. </p>
+         <p>I am at my best learning and building with a team of builders.</p>
         </div>
         <ul className={styles['about-language-wrapper']}>
           <li>
