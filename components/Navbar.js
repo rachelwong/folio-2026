@@ -2,7 +2,6 @@ import styles from "../styles/Navbar.module.scss"
 import Link from 'next/link'
 import Image from 'next/image'
 import profileImage from '../public/main_image.png'
-import { FaTimes, FaBars } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { useState} from 'react'
 import { HamburgerMenu } from './HamburgerMenu/index'
