@@ -42,7 +42,6 @@ const blog = ({ posts }) => {
     <Head>
       <title>Blog | Rachel Wong front end developer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Front end Portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
