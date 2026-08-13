@@ -95,8 +95,6 @@ export default function Home({ shots }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <div className={styles['home-header']}>
@@ -115,7 +113,7 @@ export default function Home({ shots }) {
               duration: 2,
               delay: 0.5
             }} >
-            <Image src={Braces} width={300} height={ 300} alt="" aria-hidden={true} />
+            <Image src={Braces} width={300} height={ 300} alt="" aria-hidden={true} loading='eager' />
           </motion.div>
           <motion.div
             className={`${styles['home__header__star1']} ${styles['home-header__svgs']}`}
@@ -130,7 +128,7 @@ export default function Home({ shots }) {
             animate={{ opacity: 1 }}
             transition={{duration: 1.3, delay: 1.5}}
           >
-            <Image src={Hex} width={300} height={300} alt="" aria-hidden={ true } />
+            <Image src={Hex} width={300} height={300} alt="" aria-hidden={ true } loading='eager' />
           </motion.div>
           <motion.div className={`${styles['home__header__circle1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
@@ -144,28 +142,28 @@ export default function Home({ shots }) {
             animate={{ opacity: 1 }}
             transition={{duration: 1.3  , delay: 1.3}}
           >
-            <Image src={Circle} width={300} height={300} alt="" aria-hidden={ true }/>
+            <Image src={Circle} width={300} height={300} alt="" aria-hidden={ true } loading='eager' />
           </motion.div>
           <motion.div className={`${styles['home__header__circle3']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: .8 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Circle} width={300} height={300} alt="" aria-hidden={ true }/>
+            <Image src={Circle} width={300} height={300} alt="" aria-hidden={ true } loading='eager' />
           </motion.div>
           <motion.div className={`${styles['home__header__funct1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: .3 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Funct} width={10} height={10} alt="" aria-hidden={ true }/>
+            <Image src={Funct} width={10} height={10} alt="" aria-hidden={ true } loading='eager' />
           </motion.div>
           <motion.div className={`${styles['home__header__arrow1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: .3 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Arrow} width={300} height={300} alt="" aria-hidden={ true }/>
+            <Image src={Arrow} width={300} height={300} alt="" aria-hidden={ true } loading='eager'/>
           </motion.div>
           <motion.div
             className={`${styles['home__header__circle4']} ${styles['home-header__svgs']}`}
@@ -173,7 +171,7 @@ export default function Home({ shots }) {
             animate={{ opacity: .85 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Circle} width={30} height={30} alt="" aria-hidden={ true} />
+            <Image src={Circle} width={30} height={30} alt="" aria-hidden={ true} loading='eager' />
           </motion.div>
         </motion.div>
         <div className={styles['home-header__wrapper']}>
