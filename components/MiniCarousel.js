@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import Image from 'next/image'
 import "../node_modules/slick-carousel/slick/slick-theme.css"
 import "../node_modules/slick-carousel/slick/slick.css"
-import styles from '../styles/Minicarousel.module.scss'
+import styles from '../styles/Home.module.scss';
 
 const settings = {
   dots: false,
