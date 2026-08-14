@@ -241,10 +241,10 @@
 
 .project-row--even {
   display:flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 
   @include respond(tab-land) {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 }
 
@@ -252,11 +252,16 @@
   flex-basis: 50%;
   flex: 1 0 auto;
   position: relative;
+  margin-top: 1.5rem;
 
   .project-textwrapper + & {
     margin-left: 10rem;
   }
-
+  
+  @include respond(tab-land) {
+    margin-top: 0;
+  }
+  
   &:before {
     display: block;
     content: '';
@@ -292,6 +297,7 @@
   max-width: 100%;
   width: 100%;
   margin-top: 4rem;
+  
   @include respond(desktop){
     max-width: 90%;
     margin-top: 0;

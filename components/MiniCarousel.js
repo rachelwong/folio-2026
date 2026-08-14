@@ -19,19 +19,25 @@ const settings = {
   adaptiveHeight: true
 };
 
-const MiniCarousel = ({ slide1, slide2, slide3}) => {
+const MiniCarousel = ({ slideImages }) => {
+
+  if (!slideImages?.length) {
+    return "";
+  }
 
   return (
       <Slider {...settings}>
-        <div className={styles['carousel--mini__slide']}>
-          <Image src={slide1} width={570} alt="Project" className={ styles['carousel--mini__slide__image']} alt="Project snapshot 1 of 3" />
+        {slideImages?.map((link, linkIndex) => (
+          <div key={link?.toString()} 
+            className={styles['carousel--mini__slide']}>
+            <Image 
+              src={`https:${link}`} 
+              width={570}
+              height={310}
+              className={ styles['carousel--mini__slide__image']} 
+              alt={`Project snapshot ${linkIndex + 1} of ${slideImages?.length}`} />
           </div>
-        <div className={styles['carousel--mini__slide']}>
-          <Image src={ slide2 } width={570} alt="Project" className={ styles['carousel--mini__slide__image']} alt="Project snapshot 2 of 3 "/>
-        </div>
-        <div className={styles['carousel--mini__slide']}>
-            <Image src={ slide3 } width={570} alt="Project" className={ styles['carousel--mini__slide__image']} alt="Project snapshot 3 of 3"/>
-        </div>
+        ))}
       </Slider>
   )
 }

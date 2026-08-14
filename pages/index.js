@@ -3,12 +3,10 @@ import { motion } from 'framer-motion'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
 import Carousel from '../components/Carousel'
-import MiniCarousel from '../components/MiniCarousel'
 import Piano from '../components/Piano'
+import Project from '../components/Project'
 import Shot from '../components/Shot'
 import "../node_modules/slick-carousel/slick/slick-theme.css"
 import "../node_modules/slick-carousel/slick/slick.css"
@@ -22,15 +20,8 @@ import Hex from '../public/hex.svg'
 import HTML5Logo from '../public/html_logo.svg'
 import IllustratorLogo from '../public/illustrator_logo.svg'
 import JavascriptLogo from '../public/js_logo.svg'
-import Project2Image1 from '../public/Linkedout1.png'
-import Project2Image2 from '../public/Linkedout2.png'
-import Project2Image3 from '../public/Linkedout3.png'
 import MongodbLogo from '../public/mongodb_logo.svg'
 import PhotoshopLogo from '../public/photoshop_logo.svg'
-import Plus from '../public/plus-solid.svg'
-import Project1Image1 from '../public/Preloved1.png'
-import Project1Image2 from '../public/Preloved2.png'
-import Project1Image3 from '../public/Preloved3.png'
 import ReactLogo from '../public/react_logo.svg'
 import SassLogo from '../public/sass_logo.svg'
 import styles from '../styles/Home.module.scss'
@@ -42,16 +33,18 @@ export const getStaticProps = async () => {
     accessToken: process.env.NEXT_CONTENTFUL_CDN_API
   })
   const res = await client.getEntries({ content_type: 'shot' })
+  const projectsRes = await client.getEntries({ content_type: 'project' })
 
   return {
     props: {
       shots: res.items,
+      projects: projectsRes.items,
     },
     revalidate: 1
   }
 }
 
-export default function Home({ shots }) {
+export default function Home({ shots, projects }) {
 
   const titleLine1 = "Hello I'm Rachel."
   const titleLine2 = "I am a software developer from Brisbane."
@@ -220,112 +213,10 @@ export default function Home({ shots }) {
       </div>
 
       <Container className={styles.projects}>
-      <div className={styles['projects-description']}>
-        <h3 id="#projects">Projects</h3>
-      </div>
-
-<Row className={`${styles['project-row']} ${styles['project-row--even']}`}>
-        <Col lg={6}>
-          <div className={styles['project-textwrapper__inner']}>
-            <h3 className={styles['project__title'] }>LinkedOut</h3>
-            <ul className={styles['project-tags']}>
-              <li>
-                <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
-                </span>
-                <span>MongoDB</span></li>
-              <li>
-                <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-                </span>
-                <span>Express</span></li>
-              <li>
-                <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"}  aria-hidden={ true }/>
-                </span>
-                <span>React</span>
-              </li>
-              <li>
-                <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-                </span>
-                <span>Node</span>
-              </li>
-              <li>
-                <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-                </span>
-                <span>Bulma</span>
-              </li>
-            </ul>
-
-            <p className={ styles['project__summary'] }>LinkedOut is a full-stack MERN app where coding bootcamp graduates can list their profiles publicly for prospective employers and business clients to view and connect with for work opportunities. Completed as a group project.</p>
-          <div className={styles['project-actions']}>
-              <Link
-                href="https://github.com/rachelwong/linkedout-mern-client"
-                target="_blank"
-                className={styles['project-actions__livelink']}
-                rel="noopener noreferrer">
-                See repo</Link>
-            </div>
-            </div>
-        </Col>
-
-        <Col lg={ 6} className={styles['project-imagewrapper']}>
-          <MiniCarousel slide1={Project2Image1} slide2={Project2Image2} slide3={Project2Image3} />
-        </Col>
-
-      </Row>
-
-      <Row className={`${styles['project-row']} ${styles['project-row--odd']}`}>
-        <Col lg={ 6} className={styles['project-imagewrapper']}>
-          <MiniCarousel slide1={Project1Image1} slide2={Project1Image2} slide3={Project1Image3} />
-        </Col>
-        <Col lg={6}>
-          <div className={styles['project-textwrapper__inner']}>
-            <h3 className={styles['project__title'] }>Preloved</h3>
-            <ul className={styles['project-tags']}>
-              <li>
-              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
-              </span>
-              <span>Ruby</span></li>
-              <li>              <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-              </span>
-              <span>Rails</span></li>
-              <li>              <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-              </span>
-              <span>Gems</span></li>
-              <li>              <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-              </span>
-                <span>Bootstrap</span>
-              </li>
-              <li>
-                <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
-              </span>
-                <span>HTML5/CSS3</span>
-              </li>
-            </ul>
-
-            <p className={ styles['project__summary']}>A full-stack ruby-on-rails application that allows private owners of second hand musical instruments to list at compassionate prices for Queensland schools to purchase for their students.</p>
-          <div className={styles['project-actions']}>
-              {/* <Link href="/">
-                <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link> */}
-              <Link
-                href="https://github.com/rachelwong/music"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles['project-actions__livelink']}>
-                See repo</Link>
-            </div>
-            </div>
-        </Col>
-      </Row>
-
+        <div className={styles['projects-description']}>
+          <h3 id="#projects">Projects</h3>
+        </div>
+      <Project projects={projects} />
 
     </Container>
 
