@@ -235,7 +235,7 @@ export default function Home({ shots, projects }) {
       <div className={styles['about-container']}>
         <div className={styles['about-summary']}>
           <h3>About me</h3>
-          <p>I am a software developer based in Brisbane. I have five years of hands-on experience building business-critical user journeys for web, iOS and Android platforms. Prior to getting on the tools, I've worked for a number of years in administration for the public service and university student administration. In a previous life, I also did freelance illustration for local indy filmmakers and storytellers. </p>
+          <p>I am a software developer based in Brisbane. I have five years of hands-on experience building business-critical user journeys for web, iOS and Android platforms. Prior to getting on the tools, I&apos;ve worked for a number of years in administration for the public service and university student administration. In a previous life, I also did freelance illustration for local indy filmmakers and storytellers. </p>
           <p>I enjoy the process of translating a static, flat design into a living, functioning product in the hands of the customer-user. </p>
          <p>I am at my best learning and building with a team of builders.</p>
         </div>
