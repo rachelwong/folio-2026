@@ -1,16 +1,16 @@
-import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
-import styles from '../../styles/Post.module.scss'
-import Slider from 'react-slick'
-import "../../node_modules/slick-carousel/slick/slick.css"
-import "../../node_modules/slick-carousel/slick/slick-theme.css"
+import { createClient } from 'contentful';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from "next/router";
+import Slider from 'react-slick';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { useRouter } from "next/router"
-import Arrow from '../../public/arrow-right-solid.svg'
-import Image from 'next/image'
-import Head from 'next/head'
+import "../../node_modules/slick-carousel/slick/slick-theme.css";
+import "../../node_modules/slick-carousel/slick/slick.css";
+import Arrow from '../../public/arrow-right-solid.svg';
+import styles from '../../styles/Post.module.scss';
 // Initialise connection with contentful server
 const client = createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -106,15 +106,7 @@ export const getStaticProps = async ({ params }) => {
     content_type: 'post',
     'fields.slug' : params.slug
   })
-
-  return {
-    props: {
-      post: res.items[0], // pass in only the first one because slugs are unique
-    },
-    revalidate: 1
-  }
-
-  if (!items.length) {
+  if (!res?.items.length) {
     return {
       redirect: {
         destination: '/',
@@ -122,14 +114,17 @@ export const getStaticProps = async ({ params }) => {
       }
     }
   }
-
+  return {
+    props: {
+      post: res.items[0], // pass in only the first one because slugs are unique
+    },
+    revalidate: 1
+  }
 }
 
 const Post = ({ post }) => {
 
-  if (!post) return "" // error handling when new content is not available
-
-  const router = useRouter()
+  const router = useRouter();
 
   const settings = {
     dots: false,
@@ -148,6 +143,8 @@ const Post = ({ post }) => {
 
   const parsedDate = publishedDate.split("-")
   const month = new Date(Number(parsedDate[0]), Number(parsedDate[1]), Number(parsedDate[2])).toLocaleString('default', { month: 'long' })
+
+  if (!post) return "" // error handling when new content is not available
 
   return (
 <div>
