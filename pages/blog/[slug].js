@@ -106,7 +106,8 @@ export const getStaticProps = async ({ params }) => {
     content_type: 'post',
     'fields.slug' : params.slug
   })
-  if (!res?.items.length) {
+
+  if (!res.items.length) {
     return {
       redirect: {
         destination: '/',
@@ -123,9 +124,10 @@ export const getStaticProps = async ({ params }) => {
 }
 
 const Post = ({ post }) => {
-
   const router = useRouter();
 
+  if (!post) return "" // error handling when new content is not available
+  
   const settings = {
     dots: false,
     fade: true,
@@ -144,7 +146,6 @@ const Post = ({ post }) => {
   const parsedDate = publishedDate.split("-")
   const month = new Date(Number(parsedDate[0]), Number(parsedDate[1]), Number(parsedDate[2])).toLocaleString('default', { month: 'long' })
 
-  if (!post) return "" // error handling when new content is not available
 
   return (
 <div>
