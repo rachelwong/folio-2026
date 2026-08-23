@@ -1,10 +1,10 @@
-import { createClient} from 'contentful';
-import PostEntry from '../components/PostEntry'
-import styles from '../styles/Blog.module.scss'
-import Slider from 'react-slick'
-import "../node_modules/slick-carousel/slick/slick-theme.css"
-import "../node_modules/slick-carousel/slick/slick.css"
-import Head from 'next/head'
+import { createClient } from 'contentful';
+import Head from 'next/head';
+import Slider from 'react-slick';
+import PostEntry from '../components/PostEntry';
+import "../node_modules/slick-carousel/slick/slick-theme.css";
+import "../node_modules/slick-carousel/slick/slick.css";
+import styles from '../styles/Blog.module.scss';
 // initialise connection with contentful backend
 export const getStaticProps = async () => {
 
@@ -68,7 +68,7 @@ const blog = ({ posts }) => {
         </Slider>
         <div className={styles['blog-banner__content']}>
           <h3 className={styles['blog-banner__title']}>Thoughts & Writings</h3>
-          <p className={ styles['blog-banner__blurb']}>A mish-mash collection of learning notes and project post-mortems.</p>
+          <p className={ styles['blog-banner__blurb']}>Less of a blog, more of a scratch-pad. The emdashes and opinions are my own.</p>
         </div>
       </div>
       <div className={styles['blog-container']}>
