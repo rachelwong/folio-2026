@@ -1,6 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import { createClient } from 'contentful';
+import { format, parseISO } from 'date-fns';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from "next/router";
@@ -11,6 +12,8 @@ import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import Arrow from '../../public/arrow-right-solid.svg';
 import styles from '../../styles/Post.module.scss';
+import DateFormat from '../../utils/DateFormatter';
+
 // Initialise connection with contentful server
 const client = createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -143,9 +146,7 @@ const Post = ({ post }) => {
     mainText, title, publishedDate
   } = post.fields
 
-  const parsedDate = publishedDate.split("-")
-  const month = new Date(Number(parsedDate[0]), Number(parsedDate[1]), Number(parsedDate[2])).toLocaleString('default', { month: 'long' })
-
+  const parsedDate = format(parseISO(publishedDate), DateFormat.VERBOSE)
 
   return (
 <div>
@@ -178,7 +179,7 @@ const Post = ({ post }) => {
           <div className={styles['post-slide3']} id="slide3"></div>
         </Slider>
         <div className={styles['post-banner__content']}>
-          <time className={styles['post-banner__date']} dateTime={ publishedDate } >{ parsedDate[2] + " " + month + " "+ parsedDate[0] }</time>
+          <time className={styles['post-banner__date']} dateTime={ publishedDate } >{ parsedDate }</time>
           <h3 className={styles['post-banner__title']}>{ title }</h3>
         </div>
       </div>

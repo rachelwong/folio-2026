@@ -1,12 +1,11 @@
+import { format, parseISO } from 'date-fns';
+import Link from 'next/link';
 import styles from '../styles/PostEntry.module.scss';
-import Link from 'next/link'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import DateFormat from '../utils/DateFormatter';
 
 const PostEntry = ({ post }) => {
-  const { title, slug, publishedDate, tags, featureImage, blurb } = post.fields
-  const parsedDate = publishedDate.split("-")
-  const month = new Date(Number(parsedDate[0]), Number(parsedDate[1]), Number(parsedDate[2])).toLocaleString('default', { month: 'long' })
+  const { title, slug, publishedDate, tags, blurb } = post.fields
+  const parsedDate = format(parseISO(publishedDate), DateFormat.VERBOSE)
 
   return (
     <div className={styles['post-entry-wrapper']}
@@ -14,7 +13,7 @@ const PostEntry = ({ post }) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5}}
     >
-      <time className={styles['post-entry-date']} dateTime={publishedDate}>{parsedDate[2] + " " + month + " " + parsedDate[0]}</time>
+      <time className={styles['post-entry-date']} dateTime={publishedDate}>{parsedDate}</time>
       <Link href={'/blog/' + slug} rel=" noopener noreferrer" className={styles['post-entry-title__link']}>
 
         <h3 className={styles['post-entry-title']}>{title}</h3>
