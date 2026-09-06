@@ -31,11 +31,10 @@
 .post-banner__title {
   font-family: var(--SpaceGrotesk);
   margin: 1rem auto 0;
-  max-width: 65%;
   font-size: 3.5rem;
 
   @include respond(tablet) {
-  font-size: 5rem;
+    font-size: 5rem;
   }
 }
 

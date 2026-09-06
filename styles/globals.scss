@@ -8,25 +8,15 @@
   --FiraCode: 'Fira Code', monospace;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  font-display: swap;
-}
-
 html { font-size: 62.5%; }
 
 body {
   font-family: var(--Roboto);
   font-display: swap;
 }
+
 a {
-  text-decoration: none !important;
+  color: blue;
 }
 
 #__next {

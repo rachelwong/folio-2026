@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Container from 'react-bootstrap/Container'
 import Carousel from '../components/Carousel'
 import Piano from '../components/Piano'
 import Project from '../components/Project'
@@ -212,13 +211,13 @@ export default function Home({ shots, projects }) {
         <Carousel />
       </div>
 
-      <Container className={styles.projects}>
+      <div className={`${styles.projects} my-0 mx-auto px-3`}>
         <div className={styles['projects-description']}>
           <h3 id="#projects">Projects</h3>
         </div>
       <Project projects={projects} />
 
-    </Container>
+    </div>
 
       <div className={styles['shots-container']}>
         <div className={styles['shots-summary']}>
