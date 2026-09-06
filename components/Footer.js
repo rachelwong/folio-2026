@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import styles from '../styles/Footer.module.scss';
+import Image from 'next/image';
 import Link from 'next/link';
-import GithubIcon from '../public/github-brands.svg'
-import LinkedinIcon from '../public/linkedin-brands.svg'
+import GithubIcon from '../public/github-brands.svg';
+import LinkedinIcon from '../public/linkedin-brands.svg';
+import styles from '../styles/Footer.module.scss';
 
 const Footer = () => {
 
@@ -62,7 +62,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-              <small className={ styles['footer-copyright']}> Made with NextJS x Contentful | Rachel Wong © { currentYear }</small>
+              <small className={ styles['footer-copyright']}> Made with NextJS x Contentful x Tailwind | Rachel Wong © { currentYear }</small>
             </nav>
           </div>
         </div>
